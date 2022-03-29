@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script src="baseball-simulator.js"></script>
+</head>
+
+<body>
+    <form id="input-form">
+        <p>
+            <label for="at-bats">How many At Bats will this player have per game?</label>
+            <input type="number" id="at-bats" name="at-bats" value="3" min="1" max="99" required />
+        </p>
+        <p>
+            <label for="b-avg">Select player's batting average:</label>
+            <select id="b-avg" name=b-avg>
+                <option value="200">.200</option>
+                <option value="250">.250</option>
+                <option value="300" selected>.300</option>
+                <option value="333">.333</option>
+                <option value="350">.350</option>
+                <option value="375">.375</option>
+                <option value="400">.400</option>
+            </select>
+        </p>
+        <p>
+            <label for="seasons">How many seasons?</label>
+            <input type="number" id="seasons" name="seasons" value="1" min="1" max="9999" required />
+        </p>
+        <p>
+            <button type="button" onclick="runSim()">Run Simulation</button>
+        </p>
+    </form>
+
+    <p class="results">Longest hit streak: <span id="h_srk"></span></p>
+    <p class="results">Longest slump: <span id="s_srk"></span></p>
+
+    <style>
+        body {
+            margin: 3rem;
+        }
+
+        .results {
+            visibility: hidden;
+        }
+
+        input[type='number'] {
+            width: 3.5rem;
+        }
+    </style>
+</body>
+
+</html>
